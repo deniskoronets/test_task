@@ -6,6 +6,10 @@ use app\modules\api\models\EmailGithubUsersModel;
 
 class GithubController extends ApiController
 {
+    /**
+     * @return \yii\web\Response
+     * @throws \yii\base\InvalidConfigException
+     */
     public function actionEmailUsers()
     {
         $model = new EmailGithubUsersModel();

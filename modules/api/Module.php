@@ -21,7 +21,6 @@ class Module extends \yii\base\Module
     public function init()
     {
         parent::init();
-
         \Yii::$app->errorHandler->errorAction = 'api/default/error';
     }
 }

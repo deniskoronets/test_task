@@ -20,3 +20,13 @@ function parseDate($date)
 {
     return Carbon::parse($date, 'UTC');
 }
+
+/**
+ * Allows to send email from system address
+ * @return \yii\mail\MessageInterface
+ */
+function sendMail()
+{
+    return Yii::$app->mailer->compose()
+        ->setFrom('deniskoronets@woo.zp.ua');
+}

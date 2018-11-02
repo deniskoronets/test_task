@@ -7,4 +7,6 @@ return [
      * Should be overridden in local params
      */
     'jwtSecret' => '',
+    'githubToken' => '',
+    'openWeatherKey' => '',
 ];

@@ -61,7 +61,6 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
-                'api' => 'api/documentation/index',
                 'api/<controller>' => 'api/<controller>/index',
                 'api/<controller>/<action>' => 'api/<controller>/<action>',
                 'api/<controller>/<id:\d+>/<action>' => 'api/<controller>/<action>',

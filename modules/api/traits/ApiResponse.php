@@ -71,7 +71,12 @@ trait ApiResponse
                 $exception->statusCode,
                 'http',
                 $exception->getMessage(),
-                YII_DEBUG ? ['exception' => $exception] : []
+                YII_DEBUG ? [
+                    'exception' => [
+                        'class' => get_class($exception),
+                        'message' => $exception->getMessage(),
+                    ]
+                ] : []
             );
 
         } catch (UserException $exception) {
@@ -80,7 +85,12 @@ trait ApiResponse
                 422,
                 'user',
                 $exception->getMessage(),
-                YII_DEBUG ? ['exception' => $exception] : []
+                YII_DEBUG ? [
+                    'exception' => [
+                        'class' => get_class($exception),
+                        'message' => $exception->getMessage(),
+                    ]
+                ] : []
             );
 
         } catch (\Throwable $exception) {
@@ -89,7 +99,12 @@ trait ApiResponse
                 500,
                 'critical',
                 'An error occurred while processing your request',
-                YII_DEBUG ? ['exception' => $exception] : []
+                YII_DEBUG ? [
+                    'exception' => [
+                        'class' => get_class($exception),
+                        'message' => $exception->getMessage(),
+                    ]
+                ] : []
             );
         }
     }

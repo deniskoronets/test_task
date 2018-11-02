@@ -29,8 +29,10 @@ class DefaultController extends Controller
      * Shows api documentation
      * @return string
      */
-    public function actionDocumentation()
+    public function actionIndex()
     {
-        return 'Cool!';
+        return $this->render('index', [
+            'documentation' => require __DIR__ . '/../documentation.php',
+        ]);
     }
 }
