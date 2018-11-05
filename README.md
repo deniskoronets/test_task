@@ -2,4 +2,4 @@
 
 Implements sign in, sign up and github email sending functionality
 
-<a href="http://test-task.woo.zp.ua/">Demo</a>
+<a href="http://woo.zp.ua:8080/">Demo</a>
