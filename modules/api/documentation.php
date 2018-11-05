@@ -4,6 +4,7 @@ return [
     '/api/users/sign-in' => [
         'methods' => ['POST'],
         'description' => 'Allows users to sign in',
+        'requireAuthorization' => false,
         'bodyParams' => [
             'email' => 'required,string,email',
             'password' => 'required,string',
@@ -29,6 +30,7 @@ return [
     '/api/users/sign-up' => [
         'methods' => ['POST'],
         'description' => 'Allows users to sign up',
+        'requireAuthorization' => false,
         'bodyParams' => [
             'email' => 'required,string,email',
             'password' => 'required,string,min=6',
@@ -48,6 +50,7 @@ return [
     '/api/github/email-users' => [
         'methods' => ['POST'],
         'description' => 'Allows users to sign in',
+        'requireAuthorization' => true,
         'bodyParams' => [
             'usernames' => 'required,array',
             'usernames[]' => 'string,min=2,max=32',

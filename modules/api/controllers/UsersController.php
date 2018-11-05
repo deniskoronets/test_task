@@ -14,7 +14,15 @@ class UsersController extends ApiController
      */
     public function behaviors()
     {
-        return [];
+        return [
+            'verbs' => [
+                'class' => \yii\filters\VerbFilter::class,
+                'actions' => [
+                    'sign-up'  => ['POST'],
+                    'sign-in'  => ['POST'],
+                ],
+            ],
+        ];
     }
 
     /**

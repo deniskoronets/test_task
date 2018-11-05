@@ -12,6 +12,10 @@ $this->registerJs('hljs.initHighlightingOnLoad();')
 
 ?>
 
+<div class="alert alert-info">
+    Some endpoints are projected with authorization (JWT token). Requests should have <code>Authorization: Bearer ...</code> header.
+</div>
+
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -34,6 +38,10 @@ $this->registerJs('hljs.initHighlightingOnLoad();')
                         <tr>
                             <th>Description:</th>
                             <td><?= $info['description'] ?></td>
+                        </tr>
+                        <tr>
+                            <th>Require Authorization</th>
+                            <td><?= $info['requireAuthorization'] ? 'Yes' : 'No' ?></td>
                         </tr>
                         <tr>
                             <th>Body Params:</th>

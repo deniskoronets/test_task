@@ -48,7 +48,9 @@ class SignUpModel extends Model
             $fileName = uniqid() . '.jpg';
         } while (file_exists(\Yii::getAlias(User::AVATAR_PATH . $fileName)));
 
-        $image->save($fileName);
+        $image->save(
+            \Yii::getAlias(User::AVATAR_PATH . $fileName)
+        );
 
         return $fileName;
     }

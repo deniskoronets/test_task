@@ -26,7 +26,7 @@ class User extends BaseActiveRecord implements \yii\web\IdentityInterface
     use \damirka\JWT\UserTrait;
 
     const AVATAR_PATH = '@webroot/avatars/';
-    const AVATAR_URL = '@web/avatars';
+    const AVATAR_URL = '@web/avatars/';
 
     const AVATAR_SIZE = 600;
     const AVATAR_THUMBNAIL_SIZE = 62;
